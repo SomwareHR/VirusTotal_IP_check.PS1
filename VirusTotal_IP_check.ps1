@@ -1,4 +1,13 @@
-$swVTFileReportWR = Invoke-WebRequest -Method GET -Uri "https://www.virustotal.com/api/v3/ip_addresses/$args" -Headers @{"x-apikey"="$Env:zzVirusTotalAPI"}
+try {
+	$swVTFileReportWR = Invoke-WebRequest -Method GET -Uri "https://www.virustotal.com/api/v3/ip_addresses/$args" -Headers @{"x-apikey"="$Env:zzVirusTotalAPI"}
+}
+catch {
+	Write-Host $_.Exception.Message -ForegroundColor Red
+	$_.Exception
+	Write-Host "Maybe IP does not exit in VirusTotal"
+	exit
+}
+
 $swVTFileReport   = $swVTFileReportWR.content | ConvertFrom-Json
 
 Write-Host "+----------------------------------------------------------------------------------------------------"
