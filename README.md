@@ -17,7 +17,7 @@ A small pwsh script to check an overall reputation of an IP address using Powers
 
 ## WHY
 
-A short pwsh excersise for something I use regularly.
+A short pwsh exercise for something I use regularly.
 
 
 
