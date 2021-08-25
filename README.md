@@ -61,9 +61,8 @@ VirusTotal_IP_check.ps1 140.82.121.3
 
 ### Error management
 
-There is no error management, ain't noone got a time for that.
 Script expects an argument from command line and it should be an IP address.
-If it's not or there is not - who knows what will be.
+There is minimal error management - just checks if VirusTotal replies with an error.
 
 ### ToDo
 
