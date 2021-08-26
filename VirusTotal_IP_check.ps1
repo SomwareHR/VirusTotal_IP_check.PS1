@@ -4,7 +4,8 @@ try {
 catch {
 	Write-Host $_.Exception.Message -ForegroundColor Red
 	$_.Exception
-	Write-Host "Maybe IP does not exit in VirusTotal"
+	Write-Host "404? IP does not exit in VirusTotal?"
+	Write-Host "401? No API key provided?"
 	exit
 }
 
